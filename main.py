@@ -13,6 +13,8 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
+        self.setWindowTitle("Vaultins")
+
         self.ui = Ui_MainWindow()
         self.ui.setup_ui(self)
 

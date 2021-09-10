@@ -30,6 +30,24 @@ class Ui_MainWindow(object):
         self.content = QFrame()
         self.content.setStyleSheet("background-color: #282a36")
 
+        # TOP BAR
+        self.top_bar = QFrame()
+        self.top_bar.setFixedSize(w, h*0.05)
+        self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")
+
+        # APPLICATION PAGES
+        self.pages = QStackedWidget()
+        self.pages.setStyleSheet("font-size:12pt; color: #6272a4")
+
+        # CONTENT LAYOUT
+        self.content_layout = QVBoxLayout(self.content)
+        self.content_layout.setContentsMargins(0,0,0,0)
+        self.content_layout.setSpacing(0)
+
+        # ADD WIDGET TO CONTENT LAYOUT
+        self.content_layout.addWidget(self.top_bar)
+        self.content_layout.addWidget(self.pages)
+
         # ADD WIDGET TO APP 
         self.main_layout.addWidget(self.left_menu)
         self.main_layout.addWidget(self.content)
