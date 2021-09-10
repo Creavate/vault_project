@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
 
         # APPLICATION PAGES
         self.pages = QStackedWidget()
-        self.pages.setStyleSheet("font-size:12pt; color: #6272a4")
+        self.pages.setStyleSheet("font-size:12pt; color: #6272a4; background-color: black")
 
         # CONTENT LAYOUT
         self.content_layout = QVBoxLayout(self.content)
