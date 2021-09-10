@@ -29,6 +29,16 @@ class Ui_MainWindow(object):
         self.left_menu.setStyleSheet("background-color: #44475a")
         self.left_menu.setMaximumWidth(50)
 
+        # LEFT MENU LAYOUT 
+        self.left_menu_layout = QVBoxLayout(self.left_menu)
+        self.left_menu_layout.setContentsMargins(0,0,0,0)
+        self.left_menu_layout.setSpacing(0)
+        
+        # LEFT MENU TOP FRAME
+        self.left_menu_top_frame = QFrame()
+        self.left_menu_top_frame.setStyleSheet('background-color: red')
+
+
         # CONTENT
         self.content = QFrame()
         self.content.setStyleSheet("background-color: #282a36")
@@ -37,7 +47,8 @@ class Ui_MainWindow(object):
         self.top_bar = QFrame()
         self.top_bar.setMinimumWidth(30)        
         self.top_bar.setMinimumHeight(30)
-        self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")        
+        self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")      
+  
 
         # APPLICATION PAGES
         self.pages = QStackedWidget()
