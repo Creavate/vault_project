@@ -10,9 +10,10 @@ class Ui_MainWindow(object):
             parent.setObjectName("MainWindow")
 
         # WINDOW SIZE
-        w = 600 # WIDTH 300
-        h = 600 # HEIGHT 450
-        parent.setFixedSize(w, h)
+        w = 1200 # WIDTH 300
+        h = 720 # HEIGHT 450
+        parent.resize(w,h)
+        parent.setMinimumSize(960,540)
 
         # CREATE CENTRAL WIDGET
         self.central_frame = QFrame()
@@ -26,7 +27,7 @@ class Ui_MainWindow(object):
         # LEFT MENU
         self.left_menu = QFrame()
         self.left_menu.setStyleSheet("background-color: #44475a")
-        self.left_menu.setFixedSize(w*0.1, h)
+        self.left_menu.setMaximumWidth(50)
 
         # CONTENT
         self.content = QFrame()
@@ -34,7 +35,8 @@ class Ui_MainWindow(object):
 
         # TOP BAR
         self.top_bar = QFrame()
-        self.top_bar.setFixedSize(w-self.left_menu.width(), h*0.05)
+        self.top_bar.setMinimumWidth(30)        
+        self.top_bar.setMinimumHeight(30)
         self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")        
 
         # APPLICATION PAGES
