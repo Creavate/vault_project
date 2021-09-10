@@ -1,5 +1,8 @@
 from qt_core import *
 
+# IMPORTING PAGES
+from gui.pages.ui_pages import Pages
+
 # MAIN WINDOW
 class Ui_MainWindow(object):
     def setup_ui(self, parent):
@@ -52,6 +55,9 @@ class Ui_MainWindow(object):
         # APPLICATION PAGES
         self.pages = QStackedWidget()
         self.pages.setStyleSheet("font-size:12pt; color: #6272a4; background-color: black")
+        self.ui_pages = Pages()
+        self.ui_pages.setupUi(self.pages)
+        self.pages.setCurrentWidget(self.ui_pages.page_1)
 
         # BOTTOM BAR
         self.bottom_bar = QFrame()
