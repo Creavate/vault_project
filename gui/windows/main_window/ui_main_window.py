@@ -18,7 +18,6 @@ class Ui_MainWindow(object):
         self.central_frame = QFrame()
         self.central_frame.setStyleSheet("background-color: #282a36")
 
-
         # CREATE MAIN LAYOUT
         self.main_layout = QHBoxLayout(self.central_frame)
         self.main_layout.setContentsMargins(0,0,0,0)
@@ -36,21 +35,7 @@ class Ui_MainWindow(object):
         # TOP BAR
         self.top_bar = QFrame()
         self.top_bar.setFixedSize(w-self.left_menu.width(), h*0.05)
-        self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")
-        self.top_bar_content = QHBoxLayout(self.top_bar)
-
-        # LEFT LABEL -> TOP BAR
-        self.left_label_top = QLabel("TEXTO ESQUERDA")
-        self.left_label_top.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-
-        # RIGHT LABEL -> TOP BAR
-        self.right_label_top = QLabel("TEXTO DIREITA")
-        self.right_label_top.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
-
-        # ADDING TO TOP BAR
-        self.top_bar_content.addWidget(self.left_label_top)
-        self.top_bar_content.addWidget(self.right_label_top)
-        
+        self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")        
 
         # APPLICATION PAGES
         self.pages = QStackedWidget()
@@ -63,21 +48,6 @@ class Ui_MainWindow(object):
         self.bottom_bar = QFrame()
         self.bottom_bar.setFixedSize(w - self.left_menu.width(), h*0.05)
         self.bottom_bar.setStyleSheet("background-color: #21232d; color: #6272a4")
-        self.bottom_bar_content = QHBoxLayout(self.bottom_bar)
-
-        # LEFT LABEL -> BOTTOM BAR
-        self.left_label_bottom = QLabel("TEXTO ESQUERDA")
-        self.left_label_bottom.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-
-        # RIGHT LABEL -> BOTTOM BAR
-        self.right_label_bottom = QLabel("TEXTO DIREITA")
-        self.right_label_bottom.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
-
-        # ADDING TO bottom BAR
-        self.bottom_bar_content.addWidget(self.left_label_bottom)
-        self.bottom_bar_content.addWidget(self.right_label_bottom)
-        
-
 
         # CONTENT LAYOUT
         self.content_layout = QVBoxLayout(self.content)
